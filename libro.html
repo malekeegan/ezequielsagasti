@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Libro · Ezequiel Sagasti</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="bg-paper2 grain">
+
+  <div class="statusbar"><span>9:41</span><span class="dots"><i></i><i></i><i></i></span></div>
+
+  <header class="topbar">
+    <a class="name" href="index.html">ezequiel <em>sagasti</em></a>
+    <button class="burger" id="burger" aria-label="menú"><i></i><i></i><i></i></button>
+  </header>
+
+  <div class="menu" id="menu">
+    <div class="menu-top">
+      <div class="name display">ezequiel sagasti</div>
+      <button class="close" id="close">×</button>
+    </div>
+    <nav>
+      <a href="index.html"><span class="mi">00</span> inicio</a>
+      <a href="recorrido.html"><span class="mi">01</span> recorrido</a>
+      <a href="teatro-consciente.html"><span class="mi">02</span> teatro consciente</a>
+      <a href="libro.html" class="active"><span class="mi">03</span> libro</a>
+      <a href="contacto.html"><span class="mi">04</span> contacto</a>
+    </nav>
+    <div class="menu-foot">buenos aires · argentina</div>
+  </div>
+
+  <main>
+    <section class="block paper2 stagger" id="libro" data-screen-label="Libro">
+      <div class="eyebrow section-eye">libro</div>
+      <h2 class="display book-title">Teatro consciente</h2>
+      <p class="display-italic book-subtitle">hacia un teatro fenomenológico</p>
+      <div class="book-cover"><img src="assets/tapa-libro.jpg" alt="Tapa del libro Teatro consciente"></div>
+      <p class="body-text">Durante siglos, el teatro partió de una misma premisa: actuar es representar. Este libro comienza donde ese paradigma se agota: la escena ya no pide actuar desde lo que nos sucede dentro, sino abrirse a lo que pasa afuera y ser el resultado de afectarse por ello.</p>
+      <p class="body-text">Sagasti reúne su experiencia filosófica y escénica para proponer otra manera de actuar: un teatro donde el sentido no se fuerza ni se fabrica de antemano, sino que aparece en el momento. Aquí presenta la vía de las imágenes resonantes, un enfoque que reemplaza la psicología interna por el encuentro con imágenes externas que orientan el conflicto, el deseo y la presencia.</p>
+      <div class="pull quote" data-typewriter>Un teatro que no representa: acontece.</div>
+      <div class="price-card">
+        <div class="label">edición impresa</div>
+        <div class="price">$ 30.000</div>
+        <div class="buy-btns">
+          <a class="btn btn--solid" href="https://wa.me/5491156044945?text=Hola%2C%20me%20interesa%20comprar%20el%20libro%20%22Teatro%20consciente%3A%20hacia%20un%20teatro%20fenomenol%C3%B3gico%22%20de%20Ezequiel%20Sagasti" target="_blank" rel="noopener">Quiero mi libro →</a>
+        </div>
+      </div>
+    </section>
+    <nav class="pagenav">
+      <a href="index.html">← Volver al inicio</a>
+    </nav>
+  </main>
+
+<script>
+  const menu=document.getElementById('menu');
+  document.getElementById('burger').onclick=()=>menu.classList.add('open');
+  document.getElementById('close').onclick=()=>menu.classList.remove('open');
+</script>
+<script src="anim.js" defer></script>
+</body>
+</html>

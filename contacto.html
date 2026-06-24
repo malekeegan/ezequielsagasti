@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto · Ezequiel Sagasti</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="bg-dark grain">
+
+  <div class="statusbar"><span>9:41</span><span class="dots"><i></i><i></i><i></i></span></div>
+
+  <header class="topbar">
+    <a class="name" href="index.html">ezequiel <em>sagasti</em></a>
+    <button class="burger" id="burger" aria-label="menú"><i></i><i></i><i></i></button>
+  </header>
+
+  <div class="menu" id="menu">
+    <div class="menu-top">
+      <div class="name display">ezequiel sagasti</div>
+      <button class="close" id="close">×</button>
+    </div>
+    <nav>
+      <a href="index.html"><span class="mi">00</span> inicio</a>
+      <a href="recorrido.html"><span class="mi">01</span> recorrido</a>
+      <a href="teatro-consciente.html"><span class="mi">02</span> teatro consciente</a>
+      <a href="libro.html"><span class="mi">03</span> libro</a>
+      <a href="contacto.html" class="active"><span class="mi">04</span> contacto</a>
+    </nav>
+    <div class="menu-foot">buenos aires · argentina</div>
+  </div>
+
+  <main>
+    <section class="block dark stagger" id="contacto" data-screen-label="Contacto">
+      <div class="eyebrow section-eye">contacto</div>
+      <h2 class="display section-title">¿<em>hablamos</em>?</h2>
+      <p class="body-text">Consultas, propuestas y proyectos.</p>
+      <div class="contact-list">
+        <a class="contact-row" href="mailto:ezequielsagasti@gmail.com">
+          <span class="cr-k">mail</span><span class="cr-v">ezequielsagasti@gmail.com</span>
+        </a>
+        <a class="contact-row" href="https://www.instagram.com/ezequielsagasti/" target="_blank" rel="noopener">
+          <span class="cr-k">instagram</span><span class="cr-v">@ezequielsagasti</span>
+        </a>
+        <a class="contact-row" href="https://www.instagram.com/teatroconsciente/" target="_blank" rel="noopener">
+          <span class="cr-k">la escuela</span><span class="cr-v">@teatroconsciente</span>
+        </a>
+        <a class="contact-row" href="https://www.instagram.com/pasajeteatral/" target="_blank" rel="noopener">
+          <span class="cr-k">el teatro</span><span class="cr-v">@pasajeteatral</span>
+        </a>
+        <a class="contact-row" href="https://maps.app.goo.gl/v1oac1T6fKWQUrmx7" target="_blank" rel="noopener">
+          <span class="cr-k">dónde</span><span class="cr-v">Zufriategui 1387, Vicente López</span>
+        </a>
+      </div>
+    </section>
+    <nav class="pagenav">
+      <a href="index.html">← Volver al inicio</a>
+    </nav>
+  </main>
+
+<script>
+  const menu=document.getElementById('menu');
+  document.getElementById('burger').onclick=()=>menu.classList.add('open');
+  document.getElementById('close').onclick=()=>menu.classList.remove('open');
+</script>
+<script src="anim.js" defer></script>
+</body>
+</html>

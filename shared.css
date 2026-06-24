@@ -1,0 +1,206 @@
+/* ============================================================
+   EZEQUIEL SAGASTI — sistema base compartido
+   Cormorant Garamond es la voz · DM Sans es la estructura
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300..600;1,9..40,300..500&display=swap');
+
+:root {
+  /* color */
+  --charcoal:    oklch(0.205 0.010 60);   /* casi negro, cálido */
+  --charcoal-2:  oklch(0.255 0.010 60);
+  --paper:       oklch(0.955 0.010 85);   /* blanco papel cálido */
+  --paper-2:     oklch(0.915 0.012 85);
+  --ink:         oklch(0.255 0.008 60);   /* texto carbón */
+  --gray:        oklch(0.585 0.006 60);   /* gris dato */
+  --gray-soft:   oklch(0.700 0.005 60);
+  --red:         oklch(0.535 0.165 27);   /* rojo teatral */
+  --red-bright:  oklch(0.585 0.185 27);
+  --gold:        oklch(0.720 0.075 75);   /* dorado fechas/premios */
+
+  /* tipo */
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+html, body { height: 100%; }
+body { font-family: var(--sans); }
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+
+/* ---- voz: Cormorant ------------------------------------------------ */
+.display {
+  font-family: var(--serif);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+.display-italic {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.05;
+}
+.quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+/* ---- estructura: DM Sans ------------------------------------------ */
+.eyebrow {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--red);
+}
+
+.pagehead {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gray);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navlink {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.body-text {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.85;
+  text-wrap: pretty;
+}
+
+.tag {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 0.5px solid var(--gray);
+  border-radius: 100px;
+  color: var(--gray);
+  display: inline-block;
+  white-space: nowrap;
+}
+.tag--rojo { border-color: var(--red); color: var(--red); }
+.tag--oro  { border-color: var(--gold); color: var(--gold); }
+
+.btn {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border: 0.5px solid currentColor;
+  transition: background .25s, color .25s;
+}
+
+.num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.datum {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+/* ---- texturas ----------------------------------------------------- */
+/* grano sutil, se aplica como overlay fijo dentro del “teléfono” */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+}
+.grain--light::after { mix-blend-mode: multiply; opacity: 0.045; }
+.grain--dark::after  { mix-blend-mode: soft-light; opacity: 0.10; }
+
+/* placeholder de imagen rayado con etiqueta monospace */
+.ph {
+  position: relative;
+  background-color: color-mix(in oklch, var(--ph-bg, #444) 92%, transparent);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent, transparent 7px,
+    color-mix(in oklch, var(--ph-line, #fff) 9%, transparent) 7px,
+    color-mix(in oklch, var(--ph-line, #fff) 9%, transparent) 8px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.ph span {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: var(--ph-line, #fff);
+  opacity: 0.55;
+  text-align: center;
+  padding: 0 12px;
+}
+
+/* status bar minimal del teléfono */
+.statusbar {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px 0 26px;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  flex: none;
+}
+.statusbar .dots { display: flex; gap: 4px; align-items: center; }
+.statusbar .dots i {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: currentColor; display: block; opacity: 0.85;
+}
+
+::-webkit-scrollbar { width: 0; height: 0; }

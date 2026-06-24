@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recorrido · Ezequiel Sagasti</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="bg-paper grain">
+
+  <div class="statusbar"><span>9:41</span><span class="dots"><i></i><i></i><i></i></span></div>
+
+  <header class="topbar">
+    <a class="name" href="index.html">ezequiel <em>sagasti</em></a>
+    <button class="burger" id="burger" aria-label="menú"><i></i><i></i><i></i></button>
+  </header>
+
+  <div class="menu" id="menu">
+    <div class="menu-top">
+      <div class="name display">ezequiel sagasti</div>
+      <button class="close" id="close">×</button>
+    </div>
+    <nav>
+      <a href="index.html"><span class="mi">00</span> inicio</a>
+      <a href="recorrido.html" class="active"><span class="mi">01</span> recorrido</a>
+      <a href="teatro-consciente.html"><span class="mi">02</span> teatro consciente</a>
+      <a href="libro.html"><span class="mi">03</span> libro</a>
+      <a href="contacto.html"><span class="mi">04</span> contacto</a>
+    </nav>
+    <div class="menu-foot">buenos aires · argentina</div>
+  </div>
+
+  <main>
+    <section class="block paper stagger" id="recorrido" data-screen-label="Recorrido">
+      <div class="eyebrow section-eye">recorrido</div>
+      <h2 class="display section-title">director,<br>dramaturgo<br>e <em>investigador</em></h2>
+      <div class="tags-row">
+        <span class="tag tag--rojo">Lic. filosofía</span>
+        <span class="tag tag--rojo">Lic. dirección y producción de cine y TV</span>
+      </div>
+      <div class="portrait"><img src="assets/retrato-ezequiel.jpg" alt="Retrato de Ezequiel Sagasti"></div>
+      <p class="body-text">Fundó y dirige <a href="teatro-consciente.html"><strong>Teatro Consciente</strong></a>, una escuela de formación actoral, con 10 años de trayectoria. En 2024 cofundó <a href="teatro-consciente.html#sueno"><strong>Pasaje Teatral</strong></a>, un teatro ubicado en Vicente López donde funciona la escuela, produce y dirige obras propias.</p>
+      <p class="body-text">Como autor y director, estrenó en salas comerciales como <strong>Metropolitan, La Comedia, Multiescena, Teatro Picadilly, Teatro Porteño y Microteatro</strong> y en el circuito independiente porteño.</p>
+      <p class="body-text">En cuanto al circuito oficial, dirigió para el <strong>Teatro Nacional Cervantes</strong> y en el <strong>Teatro San Martín</strong>, este año, dirigirá una obra de la Unión Europea y, en 2027, estrenará como autor.</p>
+      <p class="body-text">También trabajó en cine y televisión como guionista para una de las principales productoras del país (<strong>Telefe</strong>) y como coach actoral de actores premiados (<strong>ACE y Goya español</strong>).</p>
+      <p class="body-text">Cursó la <strong>Lic. en Dirección y Producción de Cine, TV y Radio</strong> en la Universidad de Belgrano y, actualmente, finaliza la <strong>Lic. en Filosofía</strong> en la Universidad de Buenos Aires, con orientación en Filosofía de la Mente.</p>
+      <div class="pull quote" data-typewriter>Con su mirada escéptica y de marcado corte existencialista, usa el teatro para explorar problemáticas filosóficas.</div>
+      <p class="body-text">A partir de sus estudios en filosofía desarrolló una investigación sobre la fenomenología de la percepción, aplicada al teatro y la actuación. En 2026 <strong>presentó su primer libro en Madrid y Buenos Aires</strong>, <a href="libro.html">“Teatro consciente: Hacia un teatro fenomenológico”</a>.</p>
+      <p class="body-text">Es creador de <strong>Teatro Short</strong>, un formato de obras de quince minutos con presencia en Punta del Este y Buenos Aires.</p>
+    </section>
+    <nav class="pagenav">
+      <a href="index.html">← Volver al inicio</a>
+    </nav>
+  </main>
+
+<script>
+  const menu=document.getElementById('menu');
+  document.getElementById('burger').onclick=()=>menu.classList.add('open');
+  document.getElementById('close').onclick=()=>menu.classList.remove('open');
+</script>
+  <script src="anim.js" defer></script>
+</body>
+</html>
